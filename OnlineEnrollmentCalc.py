@@ -230,8 +230,7 @@ def runTime():
         # Question 1: Students virt/not per term
         print("Question 1")
         for term in termStudents:
-            print("\nFor term: " + term)
-            q1(termStudents[term])
+            write(term, virtFilter(termStudents[term], False), percentage(virtFilter(termStudents[term])))
 
         # Question 2: Students in program per term
         print("\n\n\nQuestion 2:")
