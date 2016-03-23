@@ -44,6 +44,8 @@ class Course:
 
 allStudents = {}
 allCourses = {}
+programs = []
+virtPrograms = []
 
 
 def readEnrolls(file):
@@ -186,6 +188,7 @@ outFile = None
 
 
 def registerFiles():
+    global outFile
     print("Please enter the enrollment file:")
     while True:
         try:
@@ -217,9 +220,21 @@ def defFiles():
     readDrops("Drops.csv")
 
 
+def createPrograms():
+    for key, student in allStudents.items():
+        if student.program not in programs:
+            if student.prog:
+                virtPrograms.append(student.program)
+            programs.append(student.program)
+
+    virtPrograms.sort()
+    programs.sort()
+
+
 # To execute at runtime
 def runTime():
     registerFiles()
+    createPrograms()
     with open(outFile, 'w', newline='') as f:
         write = lambda w: csv.writer(f).writerows(w)
 
@@ -230,7 +245,8 @@ def runTime():
         # Question 1: Students virt/not per term
         print("Question 1")
         for term in termStudents:
-            write(term, virtFilter(termStudents[term], False), percentage(virtFilter(termStudents[term])))
+            write(term, virtFilter(termStudents[term], False),
+                  percentage(virtFilter(termStudents[term])))
 
         # Question 2: Students in program per term
         print("\n\n\nQuestion 2:")
