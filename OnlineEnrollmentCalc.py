@@ -13,8 +13,8 @@ class Student:
         self.first = first
         self.last = last
         self.virt = 'V' in virt
+        #TODO: Students can change partway through. fuck
         self.prog = virt
-        self.program = program
         self.pref = pref
         self.courses = []
         self.droppedCourses = []
@@ -65,7 +65,9 @@ def readEnrolls(file):
                            courseData[4], courseData[5], courseData[6],
                            courseData[7])
             studentData = row[0:8]
-            if studentData[2] not in allStudents:
+            #TODO: Fix this. Just appending term to ID so changed terms work. This breaks
+            # a LOT of statistics tracking (anything w/ previous-term)
+            if studentData[2] + studentData[6] not in allStudents:
                 # Yes... let the hate flow through you
                 allStudents[studentData[2]] = \
                     Student(studentData[0], studentData[1], studentData[4],
@@ -115,7 +117,15 @@ def virtFilter(students, virt):
     return newStudents
 
 
-def progFilter(students):
+def progFilter(students, program):
+    filtered = {}
+    for key, student in students.items():
+        if student.prog == program:
+            filtered[key] = student
+    return filtered
+
+
+def progGet(students):
     prog = {}
     for key, student in students.items():
         if student.prog not in prog:
@@ -126,20 +136,22 @@ def progFilter(students):
 
 def newFilter(students):
     noobs = {}
-    # TODO: Hardcoded course order. Not sure how to fix. Seasons are alphabetical...
-    courseOrder = {"Summer 2015": 1, "Fall 2015": 2, "Spring 2016": 3}
     for key, student in students.items():
-        firstTerm = min(student.courses, key=(lambda t: courseOrder[t.term])).term
+        firstTerm = min(student.courses, key=(lambda t: keyTerm(t.term))).term
         if firstTerm not in noobs:
             noobs[firstTerm] = {}
         noobs[firstTerm][key] = student
     return noobs
 
 
-def numClassFilter(students, num):
+def numClassFilter(students, num, term):
     takers = {}
     for key, student in students.items():
-        if len(student.courses) is num:
+        numTermCourses = 0
+        for course in student.courses:
+            if course.term == term:
+                numTermCourses += 1
+        if numTermCourses is num:
             takers[key] = student
 
     return takers
@@ -173,17 +185,10 @@ def inTerms(student, term1, term2):
 
 
 def percentage(n1, n2):
+    if n2 is 0:
+        return "N/A"
     return str(round((n1/n2)*100, 2)) + "%"
 
-    # TODO: Implement the following:
-    #   num Of allStudents per-term
-    #       Virt vs Non-Virt
-    #       Per-Program
-    #   New allStudents per-term
-    #       Per-program
-    #   Num of course enrollments per term
-    #       V vs NV
-    #       num of classes for each student
 
 outFile = None
 
@@ -223,13 +228,18 @@ def defFiles():
 
 def createPrograms():
     for key, student in allStudents.items():
-        if student.program not in programs:
-            if student.prog:
-                virtPrograms.append(student.program)
-            programs.append(student.program)
+        if student.prog not in programs:
+            if student.virt:
+                virtPrograms.append(student.prog)
+            programs.append(student.prog)
 
     virtPrograms.sort()
     programs.sort()
+
+
+def keyTerm(t):
+    seasonComp = {"Spring": 1, "Summer": 2, "Fall": 3}
+    return t[-4:] + str(seasonComp[t[:-5]])
 
 
 # To execute at runtime
@@ -245,36 +255,62 @@ def runTime():
 
         # Question 1: Students virt/not per term
         print("Question 1")
+        write(["# and % of students on/off campus"])
         numPercent = lambda x: [str(x), percentage(x, len(termStudents[term]))]
         write(["", "# On", "% On", "# Off", "% Off"])
-        for term in termStudents:
-            write(list(chain([term], numPercent(len(virtFilter(termStudents[term], False))), numPercent(
-                len(virtFilter(termStudents[term], True))))))
+        for term in sorted(termStudents, key=keyTerm):
+            write(list(chain([term],
+                             numPercent(len(
+                                 virtFilter(termStudents[term], False))),
+                             numPercent(len(
+                                 virtFilter(termStudents[term], True))))))
+
+        print(" ".join(virtPrograms))
+
+        write([""])
 
         # Question 2: Students in program per term
-        print("\n\n\nQuestion 2:")
-        for term in termStudents:
-            print("\nFor term: " + term)
-            progs = progFilter(virtTermStudents[term])
-            print(", ".join((str(prog) + ": " + str(len(num)) for prog, num in progs.items())))
+        print("\nQuestion 2")
+        write(["# of students in each online program"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] + [len(progFilter(termStudents[term], program))
+                            for program in virtPrograms] +
+                  [len(virtFilter(termStudents[term], True))])
 
-            # TODO: Virt/non-virt (If needed)
+        write([""])
 
         # Question 3:
-        newStudents = newFilter(virtStudents)
-        for term, students in newStudents.items():
-            print("New students in term " + term)
-            print(len(students))
+        print("\nQuestion 3")
+        write(["# of new students in each online program"])
+        write([""] + virtPrograms + ["Total"])
+        noobs = newFilter(allStudents)
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] + [len(progFilter(noobs[term], program))
+                            for program in virtPrograms] +
+                  [len(virtFilter(noobs[term], True))])
 
-# Testing TODO
+        write([""])
 
-# for student in allStudents:
-#    print(allStudents[student].first)
+        # Question 4:
+        print("\nQuestion 4")
+        write(["% of students in each online program taking 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] +
+                  [percentage(len(numClassFilter(progFilter(termStudents[term], program), 1, term)),
+                              len(progFilter(termStudents[term], program)))
+                   for program in virtPrograms] +
+                  [percentage(len(numClassFilter(termStudents[term], 1, term)),
+                              len(termStudents[term]))])
+            # Testing
 
-# asdf = studentsPerTerm(allStudents)
-# for term in asdf:
-#    print(term, asdf[term])
+            # for student in allStudents:
+            #    print(allStudents[student].first)
 
+            # asdf = studentsPerTerm(allStudents)
+            # for term in asdf:
+            #    print(term, asdf[term])
 
-# Leave this as the last call
+            # Leave this as the last call
 runTime()
