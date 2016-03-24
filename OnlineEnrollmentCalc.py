@@ -1,4 +1,5 @@
 import csv
+from itertools import chain
 
 # ID'ed by their net IDs
 
@@ -236,7 +237,7 @@ def runTime():
     registerFiles()
     createPrograms()
     with open(outFile, 'w', newline='') as f:
-        write = lambda w: csv.writer(f).writerows(w)
+        write = lambda w: csv.writer(f).writerow(w)
 
         termStudents = studentsPerTerm(allStudents)
         virtStudents = virtFilter(allStudents, True)
@@ -244,9 +245,11 @@ def runTime():
 
         # Question 1: Students virt/not per term
         print("Question 1")
+        numPercent = lambda x: [str(x), percentage(x, len(termStudents[term]))]
+        write(["", "# On", "% On", "# Off", "% Off"])
         for term in termStudents:
-            write(term, virtFilter(termStudents[term], False),
-                  percentage(virtFilter(termStudents[term])))
+            write(list(chain([term], numPercent(len(virtFilter(termStudents[term], False))), numPercent(
+                len(virtFilter(termStudents[term], True))))))
 
         # Question 2: Students in program per term
         print("\n\n\nQuestion 2:")
