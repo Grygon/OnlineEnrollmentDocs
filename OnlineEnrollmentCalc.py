@@ -1,5 +1,4 @@
 import csv
-from itertools import chain
 
 # ID'ed by their net IDs
 
@@ -7,14 +6,13 @@ from itertools import chain
 class Student:
 
     def __init__(self, eid, email, first, last,
-                 pref, virt, program):
+                 pref):
         self.eid = eid
         self.email = email
         self.first = first
         self.last = last
-        self.virt = 'V' in virt
-        #TODO: Students can change partway through. fuck
-        self.prog = virt
+        # TODO: Students can change partway through. fuck
+        self.progs = {}
         self.pref = pref
         self.courses = []
         self.droppedCourses = []
@@ -28,6 +26,10 @@ class Student:
         if course in self.courses:
             self.droppedCourses.append(course)
             self.courses.pop(course)
+
+    def addProg(self, program, term):
+        if term not in self.progs:
+            self.progs[term] = program
 
 
 # ID'ed by the course number
@@ -65,16 +67,18 @@ def readEnrolls(file):
                            courseData[4], courseData[5], courseData[6],
                            courseData[7])
             studentData = row[0:8]
-            #TODO: Fix this. Just appending term to ID so changed terms work. This breaks
+            # TODO: Fix this. Just appending term to ID so changed terms work. This breaks
             # a LOT of statistics tracking (anything w/ previous-term)
-            if studentData[2] + studentData[6] not in allStudents:
+            if studentData[2] not in allStudents:
                 # Yes... let the hate flow through you
                 allStudents[studentData[2]] = \
                     Student(studentData[0], studentData[1], studentData[4],
-                            studentData[3], studentData[5], studentData[6],
-                            studentData[7])
+                            studentData[3], studentData[5])
 
             allStudents[studentData[2]].addCourse(allCourses[courseData[1]])
+            for course in allStudents[studentData[2]].courses:
+                allStudents[studentData[2]].addProg(
+                    studentData[6], course.term)
 
 
 def readDrops(file):
@@ -92,6 +96,8 @@ def readDrops(file):
                 allStudents[student].dropCourse(allCourses[cid])
                 allStudents[student].reasons.append(reason)
 
+        # TODO: Implement new prog listing for drops.
+
 
 # Counts number of course enrollments per term. Each student
 # enrolled per course increases it by 1
@@ -99,41 +105,46 @@ def readDrops(file):
 
 def studentsPerTerm(students):
     termStudents = {}
-    for student in students:
-        for course in students[student].courses:
-            if course.term not in termStudents:
-                termStudents[course.term] = {}
-            termStudents[course.term][student] = students[student]
+    for key, student in students.items():
+        for prog in student.progs:
+            if prog not in termStudents:
+                termStudents[prog] = {}
+            termStudents[prog][key] = student
     return termStudents
 
 
-# Filters out students whose virt case is equal to virt
-def virtFilter(students, virt):
-    newStudents = {}
-    for student in students:
-        if students[student].virt is virt:
-            newStudents[student] = students[student]
+# Filters out students who are virt in the given term
+def virtFilter(students, virt, term):
+    virtStudents = {}
+    for key, student in students.items():
+        for p, prog in student.progs.items():
+            if ('V' in prog) == virt:
+                virtStudents[key] = student
 
-    return newStudents
+    return virtStudents
 
 
-def progFilter(students, program):
+# Filters for students in the given program in the given term
+def progFilter(students, program, term):
     filtered = {}
     for key, student in students.items():
-        if student.prog == program:
+        if student.progs[term] == program:
             filtered[key] = student
     return filtered
 
 
+# Gets a dict of enrolled programs for the given term
 def progGet(students):
     prog = {}
     for key, student in students.items():
-        if student.prog not in prog:
-            prog[student.prog] = {}
-        prog[student.prog][key] = student
+        if student.progs[term] not in prog:
+            prog[student.progs[term]] = {}
+        prog[student.progs[term]][key] = student
     return prog
 
 
+# Returns a dict of terms and noobs for the respective term
+# TODO: Optimize for new progs
 def newFilter(students):
     noobs = {}
     for key, student in students.items():
@@ -144,6 +155,7 @@ def newFilter(students):
     return noobs
 
 
+# Returns a dict of students taking the number of classes in the term
 def numClassFilter(students, num, term):
     takers = {}
     for key, student in students.items():
@@ -157,6 +169,7 @@ def numClassFilter(students, num, term):
     return takers
 
 
+# Returns the intersection of two students
 def overlap(firstStudents, secondStudents):
     overlappers = {}
     for key in firstStudents:
@@ -166,20 +179,20 @@ def overlap(firstStudents, secondStudents):
     return overlappers
 
 
+# Finds if there is a student in the given term
 def inTerm(students, term):
     for key, student in students:
-        for course in student.courses:
-            if course.term is term:
+        for pTerm in student.progs:
+            if pTerm == term:
                 return True
     return False
 
 
+# Finds if a student is in both terms
 def inTerms(student, term1, term2):
-    for course in student.courses:
-        if course.term is term1:
-            for course in student.courses:
-                if course.term is term2:
-                    return True
+    for term in student.progs:
+        if term is term1 and term is term2:
+            return True
 
     return False
 
@@ -221,17 +234,20 @@ def registerFiles():
     outFile = input("---> ")
 
 
-def defFiles():
+def testFiles():
+    global outFile
     readEnrolls("Enrols.csv")
     readDrops("Drops.csv")
+    outFile = "test.csv"
 
 
 def createPrograms():
     for key, student in allStudents.items():
-        if student.prog not in programs:
-            if student.virt:
-                virtPrograms.append(student.prog)
-            programs.append(student.prog)
+        for term, prog in student.progs.items() :
+            if prog not in programs:
+                if 'V' in prog:
+                    virtPrograms.append(prog)
+                programs.append(prog)
 
     virtPrograms.sort()
     programs.sort()
@@ -244,14 +260,16 @@ def keyTerm(t):
 
 # To execute at runtime
 def runTime():
-    registerFiles()
+    # registerFiles()
+    testFiles()
     createPrograms()
     with open(outFile, 'w', newline='') as f:
         write = lambda w: csv.writer(f).writerow(w)
 
         termStudents = studentsPerTerm(allStudents)
-        virtStudents = virtFilter(allStudents, True)
-        virtTermStudents = studentsPerTerm(virtStudents)
+        virtStudents = {}
+        for term in termStudents:
+            virtStudents[term] = virtFilter(allStudents, True, term)
 
         # Question 1: Students virt/not per term
         print("Question 1")
@@ -259,11 +277,9 @@ def runTime():
         numPercent = lambda x: [str(x), percentage(x, len(termStudents[term]))]
         write(["", "# On", "% On", "# Off", "% Off"])
         for term in sorted(termStudents, key=keyTerm):
-            write(list(chain([term],
-                             numPercent(len(
-                                 virtFilter(termStudents[term], False))),
-                             numPercent(len(
-                                 virtFilter(termStudents[term], True))))))
+            write([term] +
+                  numPercent(len(virtFilter(termStudents[term], False, term))) +
+                  numPercent(len(virtStudents[term])))
 
         print(" ".join(virtPrograms))
 
@@ -274,9 +290,9 @@ def runTime():
         write(["# of students in each online program"])
         write([""] + virtPrograms + ["Total"])
         for term in sorted(termStudents, key=keyTerm):
-            write([term] + [len(progFilter(termStudents[term], program))
+            write([term] + [len(progFilter(termStudents[term], program, term))
                             for program in virtPrograms] +
-                  [len(virtFilter(termStudents[term], True))])
+                  [len(virtFilter(termStudents[term], True, term))])
 
         write([""])
 
@@ -286,9 +302,9 @@ def runTime():
         write([""] + virtPrograms + ["Total"])
         noobs = newFilter(allStudents)
         for term in sorted(termStudents, key=keyTerm):
-            write([term] + [len(progFilter(noobs[term], program))
+            write([term] + [len(progFilter(noobs[term], program, term))
                             for program in virtPrograms] +
-                  [len(virtFilter(noobs[term], True))])
+                  [len(virtFilter(noobs[term], True, term))])
 
         write([""])
 
@@ -298,8 +314,8 @@ def runTime():
         write([""] + virtPrograms + ["Total"])
         for term in sorted(termStudents, key=keyTerm):
             write([term] +
-                  [percentage(len(numClassFilter(progFilter(termStudents[term], program), 1, term)),
-                              len(progFilter(termStudents[term], program)))
+                  [percentage(len(numClassFilter(progFilter(termStudents[term], program, term), 1, term)),
+                              len(progFilter(termStudents[term], program, term)))
                    for program in virtPrograms] +
                   [percentage(len(numClassFilter(termStudents[term], 1, term)),
                               len(termStudents[term]))])
