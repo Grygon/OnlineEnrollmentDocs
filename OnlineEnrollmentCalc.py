@@ -128,7 +128,7 @@ def virtFilter(students, virt, term):
 def progFilter(students, program, term):
     filtered = {}
     for key, student in students.items():
-        if student.progs[term] == program:
+        if term in student.progs and student.progs[term] == program:
             filtered[key] = student
     return filtered
 
@@ -243,7 +243,7 @@ def testFiles():
 
 def createPrograms():
     for key, student in allStudents.items():
-        for term, prog in student.progs.items() :
+        for term, prog in student.progs.items():
             if prog not in programs:
                 if 'V' in prog:
                     virtPrograms.append(prog)
@@ -319,6 +319,81 @@ def runTime():
                    for program in virtPrograms] +
                   [percentage(len(numClassFilter(termStudents[term], 1, term)),
                               len(termStudents[term]))])
+
+        write([""])
+
+        # Question 4:
+        print("\nQuestion 5")
+        write(["% of students in each online program taking 2 classes"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] +
+                  [percentage(len(numClassFilter(progFilter(termStudents[term], program, term), 2, term)),
+                              len(progFilter(termStudents[term], program, term)))
+                   for program in virtPrograms] +
+                  [percentage(len(numClassFilter(termStudents[term], 2, term)),
+                              len(termStudents[term]))])
+
+        write([""])
+
+        # Question 4:
+        print("\nQuestion 6")
+        write(["# of students in each online program taking 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] +
+                  [len(numClassFilter(progFilter(termStudents[term], program, term), 1, term))
+                   for program in virtPrograms] +
+                  [len(numClassFilter(virtStudents[term], 1, term))])
+
+        write([""])
+
+        # Question 4:
+        print("\nQuestion 7")
+        write(["# of students in each online program taking 2 classes"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] +
+                  [len(numClassFilter(progFilter(termStudents[term], program, term), 2, term))
+                   for program in virtPrograms] +
+                  [len(numClassFilter(virtStudents[term], 2, term))])
+
+        write([""])
+
+        # Question 4:
+        print("\nQuestion 8")
+        write(
+            ["# of students in each online program who took 1 last term, now 2 classes"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            terms = sorted(termStudents, key=keyTerm)
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            print(str(nowTerm))
+            print(str(terms[nowTerm]))
+            write([term] +
+                  [len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
+                          1, terms[nowTerm-1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          2, terms[nowTerm])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm-1]],
+                          1, terms[nowTerm-1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          virtStudents[term],
+                          2, terms[nowTerm])))])
             # Testing
 
             # for student in allStudents:
