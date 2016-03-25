@@ -1,14 +1,14 @@
 # and % of students on/off campus
 ,# On,% On,# Off,% Off
-Summer 2015,11,47.83%,35,152.17%
-Fall 2015,41,56.94%,35,48.61%
-Spring 2016,70,72.16%,35,36.08%
+Summer 2015,10,43.48%,13,56.52%
+Fall 2015,40,55.56%,32,44.44%
+Spring 2016,70,72.16%,27,27.84%
 ""
 # of students in each online program
 ,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
 Summer 2015,5,0,2,0,6,13
 Fall 2015,9,1,4,6,12,32
-Spring 2016,6,1,2,7,11,28
+Spring 2016,6,1,2,7,11,27
 ""
 # of new students in each online program
 ,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
@@ -32,7 +32,7 @@ Spring 2016,33.33%,0.0%,50.0%,28.57%,18.18%,10.31%
 ,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
 Summer 2015,2,0,1,0,3,6
 Fall 2015,4,1,1,4,6,16
-Spring 2016,3,1,1,5,9,20
+Spring 2016,3,1,1,5,9,19
 ""
 # of students in each online program taking 2 classes
 ,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
@@ -44,3 +44,23 @@ Spring 2016,2,0,1,2,2,7
 ,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
 Fall 2015,0,0,1,0,0,1
 Spring 2016,0,0,0,0,0,0
+""
+"# of students in each online program who took 1 last term, now 1 class"
+,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
+Fall 2015,1,0,0,0,3,4
+Spring 2016,2,1,1,4,4,12
+""
+"# of students in each online program who took 2 last term, now 2 classes"
+,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
+Fall 2015,3,0,1,0,2,6
+Spring 2016,2,0,1,2,2,7
+""
+"# of students in each online program who took 2 last term, now 1 class"
+,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
+Fall 2015,0,0,0,0,1,1
+Spring 2016,1,0,0,0,4,5
+""
+# of students in each online program who were in last and current semester
+,EBVMS,ECVMS,EMVMS,ESVMS,POVME,Total
+Fall 2015,4,0,2,0,6,12
+Spring 2016,6,1,2,6,10,25

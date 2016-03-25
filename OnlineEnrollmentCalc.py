@@ -117,8 +117,8 @@ def studentsPerTerm(students):
 def virtFilter(students, virt, term):
     virtStudents = {}
     for key, student in students.items():
-        for p, prog in student.progs.items():
-            if ('V' in prog) == virt:
+        for t, prog in student.progs.items():
+            if ('V' in prog) == virt and t == term:
                 virtStudents[key] = student
 
     return virtStudents
@@ -281,8 +281,6 @@ def runTime():
                   numPercent(len(virtFilter(termStudents[term], False, term))) +
                   numPercent(len(virtStudents[term])))
 
-        print(" ".join(virtPrograms))
-
         write([""])
 
         # Question 2: Students in program per term
@@ -322,7 +320,7 @@ def runTime():
 
         write([""])
 
-        # Question 4:
+        # Question 5:
         print("\nQuestion 5")
         write(["% of students in each online program taking 2 classes"])
         write([""] + virtPrograms + ["Total"])
@@ -336,7 +334,7 @@ def runTime():
 
         write([""])
 
-        # Question 4:
+        # Question 6:
         print("\nQuestion 6")
         write(["# of students in each online program taking 1 class"])
         write([""] + virtPrograms + ["Total"])
@@ -348,7 +346,7 @@ def runTime():
 
         write([""])
 
-        # Question 4:
+        # Question 7:
         print("\nQuestion 7")
         write(["# of students in each online program taking 2 classes"])
         write([""] + virtPrograms + ["Total"])
@@ -360,18 +358,17 @@ def runTime():
 
         write([""])
 
-        # Question 4:
+        terms = sorted(termStudents, key=keyTerm)
+
+        # Question 8:
         print("\nQuestion 8")
         write(
             ["# of students in each online program who took 1 last term, now 2 classes"])
         write([""] + virtPrograms + ["Total"])
         for term in sorted(termStudents, key=keyTerm):
-            terms = sorted(termStudents, key=keyTerm)
             nowTerm = terms.index(term)
             if nowTerm == 0:
                 continue
-            print(str(nowTerm))
-            print(str(terms[nowTerm]))
             write([term] +
                   [len(overlap(
                       # Students who took 1 last term
@@ -394,6 +391,137 @@ def runTime():
                       numClassFilter(
                           virtStudents[term],
                           2, terms[nowTerm])))])
+
+        write([""])
+
+        # Question 9:
+        print("\nQuestion 9")
+        write(
+            ["# of students in each online program who took 1 last term, now 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
+                          1, terms[nowTerm-1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          1, terms[nowTerm])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm-1]],
+                          1, terms[nowTerm-1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          virtStudents[term],
+                          1, terms[nowTerm])))])
+
+        write([""])
+
+        # Question 10:
+        print("\nQuestion 10")
+        write(
+            ["# of students in each online program who took 2 last term, now 2 classes"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
+                          2, terms[nowTerm-1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          2, terms[nowTerm])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm-1]],
+                          2, terms[nowTerm-1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          virtStudents[term],
+                          2, terms[nowTerm])))])
+
+        write([""])
+
+        # Question 11:
+        print("\nQuestion 11")
+        write(
+            ["# of students in each online program who took 2 last term, now 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
+                          2, terms[nowTerm-1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          1, terms[nowTerm])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm-1]],
+                          2, terms[nowTerm-1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          virtStudents[term],
+                          1, terms[nowTerm])))])
+
+        write([""])
+
+        # Question 12:
+        print("\nQuestion 12")
+        write(
+            ["# of students in each online program who were in last and current semester"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            terms = sorted(termStudents, key=keyTerm)
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [len(overlap(
+                      # Students in last term
+                      progFilter(
+                          virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
+                      # Students now
+                      progFilter(virtStudents[term], program, term)))
+                   for program in virtPrograms] +
+                  [len(overlap(
+                      # Students in last term
+                      virtStudents[terms[nowTerm-1]],
+                      # Students  now
+                      virtStudents[term]))])
+
+            # TODO: Missing Spring EBVMS student...
+
             # Testing
 
             # for student in allStudents:
