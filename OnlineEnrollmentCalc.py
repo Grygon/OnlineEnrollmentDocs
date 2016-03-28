@@ -260,8 +260,8 @@ def keyTerm(t):
 
 # To execute at runtime
 def runTime():
-    # registerFiles()
-    testFiles()
+    registerFiles()
+    # testFiles()
     createPrograms()
     with open(outFile, 'w', newline='') as f:
         write = lambda w: csv.writer(f).writerow(w)
