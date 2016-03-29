@@ -200,7 +200,7 @@ def inTerms(student, term1, term2):
 def percentage(n1, n2):
     if n2 is 0:
         return "N/A"
-    return str(round((n1/n2)*100, 2)) + "%"
+    return str(round((n1 / n2) * 100, 2)) + "%"
 
 
 outFile = None
@@ -335,7 +335,7 @@ def runTime():
         write([""])
 
         # Question 6:
-        print("\nQuestion 6")
+        print("\nQuestion 6a")
         write(["# of students in each online program taking 1 class"])
         write([""] + virtPrograms + ["Total"])
         for term in sorted(termStudents, key=keyTerm):
@@ -346,8 +346,22 @@ def runTime():
 
         write([""])
 
+        # Question 6:
+        print("\nQuestion 6b")
+        write(["% of students in each online program taking 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] +
+                  [percentage(len(numClassFilter(progFilter(termStudents[term], program, term), 1, term)),
+                              len(progFilter(termStudents[term], program, term)))
+                   for program in virtPrograms] +
+                  [percentage(len(numClassFilter(virtStudents[term], 1, term)),
+                              len(virtStudents[term]))])
+
+        write([""])
+
         # Question 7:
-        print("\nQuestion 7")
+        print("\nQuestion 7a")
         write(["# of students in each online program taking 2 classes"])
         write([""] + virtPrograms + ["Total"])
         for term in sorted(termStudents, key=keyTerm):
@@ -358,10 +372,24 @@ def runTime():
 
         write([""])
 
+        # Question 7:
+        print("\nQuestion 7b")
+        write(["% of students in each online program taking 2 classes"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            write([term] +
+                  [percentage(len(numClassFilter(progFilter(termStudents[term], program, term), 2, term)),
+                              len(progFilter(termStudents[term], program, term)))
+                   for program in virtPrograms] +
+                  [percentage(len(numClassFilter(virtStudents[term], 2, term)),
+                              len(virtStudents[term]))])
+
+        write([""])
+
         terms = sorted(termStudents, key=keyTerm)
 
         # Question 8:
-        print("\nQuestion 8")
+        print("\nQuestion 8a")
         write(
             ["# of students in each online program who took 1 last term, now 2 classes"])
         write([""] + virtPrograms + ["Total"])
@@ -371,11 +399,13 @@ def runTime():
                 continue
             write([term] +
                   [len(overlap(
+                      # In theory I don't need an overlap here,
+                      # but I don't want to mess with it...
                       # Students who took 1 last term
                       numClassFilter(
                           progFilter(
-                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
-                          1, terms[nowTerm-1]),
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          1, terms[nowTerm - 1]),
                       # Students taking 2 now
                       numClassFilter(
                           progFilter(virtStudents[term], program, term),
@@ -385,8 +415,8 @@ def runTime():
                   [len(overlap(
                       # Students who took 1 last term
                       numClassFilter(
-                          virtStudents[terms[nowTerm-1]],
-                          1, terms[nowTerm-1]),
+                          virtStudents[terms[nowTerm - 1]],
+                          1, terms[nowTerm - 1]),
                       # Students taking 2 now
                       numClassFilter(
                           virtStudents[term],
@@ -394,8 +424,52 @@ def runTime():
 
         write([""])
 
+        # Question 8:
+        print("\nQuestion 8b")
+        write(
+            ["% of students in each online program who took 1 last term, now 2 classes"])
+        # Comparing % for num who took 1
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [percentage(len(overlap(
+                      # In theory I don't need an overlap here,
+                      # but I don't want to mess with it...
+                      # Students who took 1 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          1, terms[nowTerm - 1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          2, terms[nowTerm]))),
+                      len(numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          1, terms[nowTerm - 1])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [percentage(len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          1, terms[nowTerm - 1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          virtStudents[term],
+                          2, terms[nowTerm]))),
+                      len(numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          1, terms[nowTerm - 1])))])
+
+        write([""])
+
         # Question 9:
-        print("\nQuestion 9")
+        print("\nQuestion 9a")
         write(
             ["# of students in each online program who took 1 last term, now 1 class"])
         write([""] + virtPrograms + ["Total"])
@@ -408,8 +482,8 @@ def runTime():
                       # Students who took 1 last term
                       numClassFilter(
                           progFilter(
-                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
-                          1, terms[nowTerm-1]),
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          1, terms[nowTerm - 1]),
                       # Students taking 1 now
                       numClassFilter(
                           progFilter(virtStudents[term], program, term),
@@ -419,8 +493,8 @@ def runTime():
                   [len(overlap(
                       # Students who took 1 last term
                       numClassFilter(
-                          virtStudents[terms[nowTerm-1]],
-                          1, terms[nowTerm-1]),
+                          virtStudents[terms[nowTerm - 1]],
+                          1, terms[nowTerm - 1]),
                       # Students taking 1 now
                       numClassFilter(
                           virtStudents[term],
@@ -428,8 +502,48 @@ def runTime():
 
         write([""])
 
+        # Question 9:
+        print("\nQuestion 9b")
+        write(
+            ["% of students in each online program who took 1 last term, now 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [percentage(len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          1, terms[nowTerm - 1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          1, terms[nowTerm]))),
+                      len(numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          1, terms[nowTerm])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [percentage(len(overlap(
+                      # Students who took 1 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          1, terms[nowTerm - 1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          virtStudents[term],
+                          1, terms[nowTerm]))),
+                      len(numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          1, terms[nowTerm - 1])))])
+
+        write([""])
+
         # Question 10:
-        print("\nQuestion 10")
+        print("\nQuestion 10a")
         write(
             ["# of students in each online program who took 2 last term, now 2 classes"])
         write([""] + virtPrograms + ["Total"])
@@ -442,8 +556,8 @@ def runTime():
                       # Students who took 2 last term
                       numClassFilter(
                           progFilter(
-                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
-                          2, terms[nowTerm-1]),
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          2, terms[nowTerm - 1]),
                       # Students taking 2 now
                       numClassFilter(
                           progFilter(virtStudents[term], program, term),
@@ -453,8 +567,8 @@ def runTime():
                   [len(overlap(
                       # Students who took 2 last term
                       numClassFilter(
-                          virtStudents[terms[nowTerm-1]],
-                          2, terms[nowTerm-1]),
+                          virtStudents[terms[nowTerm - 1]],
+                          2, terms[nowTerm - 1]),
                       # Students taking 2 now
                       numClassFilter(
                           virtStudents[term],
@@ -462,8 +576,48 @@ def runTime():
 
         write([""])
 
+        # Question 10:
+        print("\nQuestion 10b")
+        write(
+            ["% of students in each online program who took 2 last term, now 2 classes"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [percentage(len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          2, terms[nowTerm - 1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          2, terms[nowTerm]))),
+                      len(numClassFilter(progFilter(
+                          virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          2, terms[nowTerm - 1])))
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [percentage(len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          2, terms[nowTerm - 1]),
+                      # Students taking 2 now
+                      numClassFilter(
+                          virtStudents[term],
+                          2, terms[nowTerm]))),
+                      len(numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          2, terms[nowTerm - 1])))])
+
+        write([""])
+
         # Question 11:
-        print("\nQuestion 11")
+        print("\nQuestion 11a")
         write(
             ["# of students in each online program who took 2 last term, now 1 class"])
         write([""] + virtPrograms + ["Total"])
@@ -476,8 +630,8 @@ def runTime():
                       # Students who took 2 last term
                       numClassFilter(
                           progFilter(
-                              virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
-                          2, terms[nowTerm-1]),
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          2, terms[nowTerm - 1]),
                       # Students taking 1 now
                       numClassFilter(
                           progFilter(virtStudents[term], program, term),
@@ -487,8 +641,8 @@ def runTime():
                   [len(overlap(
                       # Students who took 2 last term
                       numClassFilter(
-                          virtStudents[terms[nowTerm-1]],
-                          2, terms[nowTerm-1]),
+                          virtStudents[terms[nowTerm - 1]],
+                          2, terms[nowTerm - 1]),
                       # Students taking 1 now
                       numClassFilter(
                           virtStudents[term],
@@ -496,8 +650,50 @@ def runTime():
 
         write([""])
 
+        # Question 11:
+        print("\nQuestion 11b")
+        write(
+            ["% of students in each online program who took 2 last term, now 1 class"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [percentage(len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          2, terms[nowTerm - 1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          progFilter(virtStudents[term], program, term),
+                          1, terms[nowTerm]))),
+                      len(numClassFilter(
+                          progFilter(
+                              virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                          2, terms[nowTerm - 1])))
+
+                   for program in virtPrograms] +
+                  # Is this right? Depends what we're looking for
+                  [percentage(len(overlap(
+                      # Students who took 2 last term
+                      numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          2, terms[nowTerm - 1]),
+                      # Students taking 1 now
+                      numClassFilter(
+                          virtStudents[term],
+                          1, terms[nowTerm]))),
+                      len(numClassFilter(
+                          virtStudents[terms[nowTerm - 1]],
+                          2, terms[nowTerm - 1])))])
+
+        write([""])
+
         # Question 12:
-        print("\nQuestion 12")
+        print("\nQuestion 12a")
         write(
             ["# of students in each online program who were in last and current semester"])
         write([""] + virtPrograms + ["Total"])
@@ -510,15 +706,44 @@ def runTime():
                   [len(overlap(
                       # Students in last term
                       progFilter(
-                          virtStudents[terms[nowTerm-1]], program, terms[nowTerm-1]),
+                          virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
                       # Students now
                       progFilter(virtStudents[term], program, term)))
                    for program in virtPrograms] +
                   [len(overlap(
                       # Students in last term
-                      virtStudents[terms[nowTerm-1]],
+                      virtStudents[terms[nowTerm - 1]],
                       # Students  now
                       virtStudents[term]))])
+
+        write([""])
+
+        # Question 12:
+        print("\nQuestion 12b")
+        write(
+            ["% of students in each online program in last semester also in current semester"])
+        write([""] + virtPrograms + ["Total"])
+        for term in sorted(termStudents, key=keyTerm):
+            terms = sorted(termStudents, key=keyTerm)
+            nowTerm = terms.index(term)
+            if nowTerm == 0:
+                continue
+            write([term] +
+                  [percentage(len(overlap(
+                      # Students in last term
+                      progFilter(
+                          virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1]),
+                      # Students now
+                      progFilter(virtStudents[term], program, term))),
+                      len(progFilter(
+                          virtStudents[terms[nowTerm - 1]], program, terms[nowTerm - 1])))
+                   for program in virtPrograms] +
+                  [percentage(len(overlap(
+                      # Students in last term
+                      virtStudents[terms[nowTerm - 1]],
+                      # Students  now
+                      virtStudents[term])),
+                      len(virtStudents[terms[nowTerm - 1]]))])
 
             # TODO: Missing Spring EBVMS student...
 
