@@ -1,0 +1,232 @@
+enrollment data,230,,,,,,,,,,,,,,,,,,
+Student EmplID,Student University Email,Student Net ID,Student Legal Last Name,Student Legal First Name,Student Preferred First Name,Student Primary Program Code,Student Primary Program Descr,Registration Status Code,Registration Status ReasonCode,Registration Date,Class Nbr,Course,Course Title,Section,Course Credits,Grade,Term Name,Class Start,Class End
+3245674,leah.feitl@case.edu,lmf63,Feitl,Leah,,CASUG,Arts & Sciences Undergraduate,E,ENRL,8/18/2015,11467,EECS  401,Digital Signal Processing,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3245674,leah.feitl@case.edu,lmf63,Feitl,Leah,,CASUG,Arts & Sciences Undergraduate,E,ENRL,8/25/2015,11470,EECS  408,Intro to Linear Systems,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3245674,leah.feitl@case.edu,lmf63,Feitl,Leah,,CASUG,Arts & Sciences Undergraduate,E,ENRL,1/13/2016,10718,EECS  416,Convex Optimization in Engr,500,3,,Spring 2016,1/11/2016,4/15/2016
+3318115,aaron.crosby@case.edu,awc37,Crosby,Aaron,,EARMS,Aerospace Engineering (MS),E,ENRL,3/27/2015,3479,EMAE  494,Energy Systems,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3318115,aaron.crosby@case.edu,awc37,Crosby,Aaron,,EARMS,Aerospace Engineering (MS),E,ENRL,4/10/2015,3390,EMAE  450,Advanced Mech Engring Analysis,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3292063,arvindkeshav.ananthakrishnan@case.edu,axa668,Ananthakrishnan,Arvind Keshav,,EBIMS,Biomedical Engineering (MS),E,ENRL,9/8/2015,11467,EECS  401,Digital Signal Processing,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346293,neha.anilkumar@case.edu,nxa234,Anilkumar,Neha,,EBIMS,Biomedical Engineering (MS),E,ENRL,8/22/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346293,neha.anilkumar@case.edu,nxa234,Anilkumar,Neha,,EBIMS,Biomedical Engineering (MS),E,ENRL,12/27/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3319210,atallah.baydoun@case.edu,axb724,Baydoun,Atallah,,EBIMS,Biomedical Engineering (MS),E,ENRL,12/18/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346286,joshua.ginsberg@case.edu,jtg78,Ginsberg,Joshua,,EBIMS,Biomedical Engineering (MS),E,ENRL,7/29/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3244753,ryan.hansen@case.edu,rah161,Hansen,Ryan,,EBIMS,Biomedical Engineering (MS),E,ENRL,1/8/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3250414,jason.hsieh@case.edu,jkh55,Hsieh,Jason,,EBIMS,Biomedical Engineering (MS),E,ENRL,1/4/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3290167,hongfa.jiang@case.edu,hxj147,Jiang,Hongfa,,EBIMS,Biomedical Engineering (MS),E,ENRL,1/18/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346198,mustafaashiqhussain.kanchwala@case.edu,mxk804,Kanchwala,Mustafa Ashiq Hussain,,EBIMS,Biomedical Engineering (MS),E,ENRL,8/17/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346198,mustafaashiqhussain.kanchwala@case.edu,mxk804,Kanchwala,Mustafa Ashiq Hussain,,EBIMS,Biomedical Engineering (MS),E,ENRL,12/30/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346451,li.li13@case.edu,lxl525,Li,Li,,EBIMS,Biomedical Engineering (MS),E,ENRL,8/21/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3185328,janie.liang@case.edu,jyl10,Liang,Janie,,EBIMS,Biomedical Engineering (MS),E,ENRL,6/23/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346297,bindi.patel@case.edu,bkp33,Patel,Bindi,,EBIMS,Biomedical Engineering (MS),E,ENRL,8/17/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346297,bindi.patel@case.edu,bkp33,Patel,Bindi,,EBIMS,Biomedical Engineering (MS),E,ENRL,1/16/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346444,rohan.shah3@case.edu,rxs792,Shah,Rohan,,EBIMS,Biomedical Engineering (MS),E,ENRL,8/17/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346819,jiawen.wei@case.edu,jxw825,Wei,Jiawen,,EBIMS,Biomedical Engineering (MS),E,ENRL,1/18/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3318095,yuanqi.xie@case.edu,yxx270,Xie,Yuanqi,,EBIMS,Biomedical Engineering (MS),E,ENRL,8/11/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3291587,zhehao.zhang@case.edu,zxz296,Zhang,Zhehao,,EBIMS,Biomedical Engineering (MS),E,ENRL,1/12/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3207753,nadia.ayat@case.edu,nra21,Ayat,Nadia,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/13/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346740,andrew.bazyk@case.edu,asb164,Bazyk,Andrew,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/21/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346849,niha.beig@case.edu,ngb18,Beig,Niha,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/21/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346849,niha.beig@case.edu,ngb18,Beig,Niha,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/28/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346399,peter.bielecki@case.edu,pab88,Bielecki,Peter,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/17/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346399,peter.bielecki@case.edu,pab88,Bielecki,Peter,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/20/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3260346,brecken.blackburn@case.edu,bjb125,Blackburn,Brecken,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/5/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346170,kelsey.bower@case.edu,klb170,Bower,Kelsey,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/17/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346170,kelsey.bower@case.edu,klb170,Bower,Kelsey,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/8/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3237545,nathaniel.braman@case.edu,nmb60,Braman,Nathaniel,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/22/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3237545,nathaniel.braman@case.edu,nmb60,Braman,Nathaniel,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/2/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3248938,paul.chariou@case.edu,plc24,Chariou,Paul,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/21/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3318392,breanne.christie@case.edu,bpc31,Christie,Breanne,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/4/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346599,douglas.crowder@case.edu,dcc67,Crowder,Douglas,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/15/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346171,hendrik.dewald@case.edu,had27,Dewald,Hendrik,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/17/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346171,hendrik.dewald@case.edu,had27,Dewald,Hendrik,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/15/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346736,mohamed.el-haddad@case.edu,mte34,El-Haddad,Mohamed,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/19/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3317876,dominique.franson@case.edu,dnf7,Franson,Dominique,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/17/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346101,selva.jeganathan@case.edu,skj42,Jeganathan,Selva,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/17/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346101,selva.jeganathan@case.edu,skj42,Jeganathan,Selva,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/21/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346288,richard.lin@case.edu,rdl48,Lin,Richard,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/17/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3346288,richard.lin@case.edu,rdl48,Lin,Richard,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/23/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3221242,yehe.liu@case.edu,yxl448,Liu,Yehe,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/21/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346161,platon.lukyanenko@case.edu,pxl282,Lukyanenko,Platon,,EBIPH,Biomedical Engineering (PhD),E,ENRL,8/25/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346161,platon.lukyanenko@case.edu,pxl282,Lukyanenko,Platon,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/26/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3245320,joseph.marmerstein@case.edu,jtm124,Marmerstein,Joseph,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/18/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3186401,matthew.mcpheeters@case.edu,mtm44,McPheeters,Matthew,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/28/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346663,shanel.pickard@case.edu,sxp671,Pickard,Shanel,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/8/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346109,griffin.rial@case.edu,gxr116,Rial,Griffin,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/28/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346167,brian.sanner@case.edu,bxs394,Sanner,Brian,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/23/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346291,andrew.schilb@case.edu,als241,Schilb,Andrew,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/18/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3318105,ujjaldidarsingh.sekhon@case.edu,uxs39,Sekhon,Ujjal Didar Singh,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/21/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3221269,michael.sun@case.edu,mbs109,Sun,Michael,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/28/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3318099,xiangxue.wang@case.edu,xxw345,Wang,Xiangxue,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/28/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346166,kun.yang4@case.edu,kxy155,Yang,Kun,,EBIPH,Biomedical Engineering (PhD),E,ENRL,1/6/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3347197,xiaowei.zhao@case.edu,xxz494,Zhao,Xiaowei,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/23/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3347619,junqi.zhuo@case.edu,jxz624,Zhuo,Junqi,,EBIPH,Biomedical Engineering (PhD),E,ENRL,12/23/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348306,lescard.augustine@case.edu,lka18,Augustine,Lescard,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/20/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3348306,lescard.augustine@case.edu,lka18,Augustine,Lescard,,EBVMS,Biomedical Engineering (MS),E,ENRL,1/5/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346252,renik.delisser@case.edu,rrd33,Delisser,Renik,,EBVMS,Biomedical Engineering (MS),E,ENRL,5/7/2015,3381,EBME  451,Molecul & Cellular Physiology,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3346252,renik.delisser@case.edu,rrd33,Delisser,Renik,,EBVMS,Biomedical Engineering (MS),E,ENRL,5/7/2015,3507,EBME  401D,Instrumentation and Signals,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3346252,renik.delisser@case.edu,rrd33,Delisser,Renik,,EBVMS,Biomedical Engineering (MS),E,ENRL,9/3/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,F,Fall 2015,8/31/2015,12/4/2015
+3346252,renik.delisser@case.edu,rrd33,Delisser,Renik,,EBVMS,Biomedical Engineering (MS),E,ENRL,9/3/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,C,Fall 2015,8/31/2015,12/4/2015
+1023898,kevin.heine@case.edu,keh88,Heine,Kevin,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/30/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346977,annamaria.lambidis@case.edu,anl56,Lambidis,AnnaMaria,,EBVMS,Biomedical Engineering (MS),E,ENRL,5/12/2015,3507,EBME  401D,Instrumentation and Signals,500,3,I,Summer 2015,5/11/2015,8/14/2015
+3348484,kaitlyn.lewis@case.edu,knl26,Lewis,Kaitlyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/25/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3348484,kaitlyn.lewis@case.edu,knl26,Lewis,Kaitlyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/25/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3348484,kaitlyn.lewis@case.edu,knl26,Lewis,Kaitlyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,12/22/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348484,kaitlyn.lewis@case.edu,knl26,Lewis,Kaitlyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,12/31/2015,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348484,kaitlyn.lewis@case.edu,knl26,Lewis,Kaitlyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,1/2/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346275,zachary.peers@case.edu,zwp4,Peers,Zachary,,EBVMS,Biomedical Engineering (MS),E,ENRL,5/4/2015,3381,EBME  451,Molecul & Cellular Physiology,500,3,B,Summer 2015,5/11/2015,8/14/2015
+3346275,zachary.peers@case.edu,zwp4,Peers,Zachary,,EBVMS,Biomedical Engineering (MS),E,ENRL,5/4/2015,3507,EBME  401D,Instrumentation and Signals,500,3,B,Summer 2015,5/11/2015,8/14/2015
+3346275,zachary.peers@case.edu,zwp4,Peers,Zachary,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/25/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346275,zachary.peers@case.edu,zwp4,Peers,Zachary,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/25/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346275,zachary.peers@case.edu,zwp4,Peers,Zachary,,EBVMS,Biomedical Engineering (MS),E,ENRL,1/8/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3345012,dustin.snapper@case.edu,dms263,Snapper,Dustin,,EBVMS,Biomedical Engineering (MS),E,ENRL,4/22/2015,3381,EBME  451,Molecul & Cellular Physiology,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3345012,dustin.snapper@case.edu,dms263,Snapper,Dustin,,EBVMS,Biomedical Engineering (MS),E,ENRL,4/22/2015,3507,EBME  401D,Instrumentation and Signals,500,3,C,Summer 2015,5/11/2015,8/14/2015
+3345012,dustin.snapper@case.edu,dms263,Snapper,Dustin,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/14/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3345012,dustin.snapper@case.edu,dms263,Snapper,Dustin,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/16/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3345012,dustin.snapper@case.edu,dms263,Snapper,Dustin,,EBVMS,Biomedical Engineering (MS),E,ENRL,12/20/2015,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3345012,dustin.snapper@case.edu,dms263,Snapper,Dustin,,EBVMS,Biomedical Engineering (MS),E,ENRL,1/5/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346698,daphne.vincent@case.edu,dxv114,Vincent,Daphne,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/11/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346698,daphne.vincent@case.edu,dxv114,Vincent,Daphne,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/21/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346698,daphne.vincent@case.edu,dxv114,Vincent,Daphne,,EBVMS,Biomedical Engineering (MS),E,ENRL,12/23/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346698,daphne.vincent@case.edu,dxv114,Vincent,Daphne,,EBVMS,Biomedical Engineering (MS),E,ENRL,1/3/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3116478,craig.wedge@case.edu,ctw3,Wedge,Craig,,EBVMS,Biomedical Engineering (MS),E,ENRL,5/3/2015,3507,EBME  401D,Instrumentation and Signals,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3116478,craig.wedge@case.edu,ctw3,Wedge,Craig,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/25/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348586,carolyn.a.williams@case.edu,caw142,Williams,Carolyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,8/31/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3348586,carolyn.a.williams@case.edu,caw142,Williams,Carolyn,,EBVMS,Biomedical Engineering (MS),E,ENRL,1/19/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3316721,elizabeth.freund@case.edu,eaf49,Freund,Elizabeth,,ECEPH,Chemical Engineering (PhD),E,ENRL,11/30/2015,11010,EMAE  450,Advanced Mech Engring Analysis,500,3,,Spring 2016,1/11/2016,4/15/2016
+3230805,erik.lindberg@case.edu,egl17,Lindberg,Erik,,ECEPH,Chemical Engineering (PhD),E,ENRL,1/20/2016,11010,EMAE  450,Advanced Mech Engring Analysis,500,3,,Spring 2016,1/11/2016,4/15/2016
+3203808,david.jack@case.edu,dmj45,Jack,David,,ECVMS,Civil Engineering (MS),E,ENRL,8/21/2015,11198,ECIV  420,Finite Element Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3203808,david.jack@case.edu,dmj45,Jack,David,,ECVMS,Civil Engineering (MS),E,ENRL,12/29/2015,11010,EMAE  450,Advanced Mech Engring Analysis,500,3,,Spring 2016,1/11/2016,4/15/2016
+3319812,xin.lu2@case.edu,xxl511,Lu,Xin,,EMAMS,Macromolecular Science (MS),E,ENRL,1/13/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3244572,daniel.villamil@case.edu,dav31,Villamil Watson,Daniel,,EMAMS,Macromolecular Science (MS),E,ENRL,8/23/2015,11198,ECIV  420,Finite Element Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3342448,jeffrey.woos@case.edu,jaw263,Woos,Jeffrey,,EMAMS,Macromolecular Science (MS),E,ENRL,1/11/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3194389,quanbin.dai@case.edu,qxd9,Dai,Quanbin,,EMAPH,Macromolecular Science (PhD),E,ENRL,1/16/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3335651,brandy.grove@case.edu,blg62,Grove,Brandy,,EMAPH,Macromolecular Science (PhD),E,ENRL,1/12/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348650,stuart.mckaige@case.edu,swm39,McKaige,Stuart,,EMAPH,Macromolecular Science (PhD),E,ENRL,1/14/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3318389,tyler.schneider@case.edu,tjs159,Schneider,Tyler,,EMAPH,Macromolecular Science (PhD),E,ENRL,1/11/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346532,chase.b.thompson@case.edu,cbt23,Thompson,Chase,,EMAPH,Macromolecular Science (PhD),E,ENRL,1/11/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3268701,joseph.d.angelo@case.edu,jda64,Angelo,Joseph,,EMCMS,Mechanical Engineering (MS),E,ENRL,8/28/2015,11740,EMAE  450,Advanced Mech Engring Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3317021,manuel.condefuentes@case.edu,mjc229,Conde Fuentes,Manuel,,EMCMS,Mechanical Engineering (MS),E,ENRL,1/8/2016,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346270,gaojun.jiang@case.edu,gxj73,Jiang,Gaojun,,EMCMS,Mechanical Engineering (MS),E,ENRL,1/9/2016,11010,EMAE  450,Advanced Mech Engring Analysis,500,3,,Spring 2016,1/11/2016,4/15/2016
+3317651,zhiyuan.tian@case.edu,zxt73,Tian,Zhiyuan,,EMCMS,Mechanical Engineering (MS),E,ENRL,5/7/2015,3479,EMAE  494,Energy Systems,500,3,B,Summer 2015,5/11/2015,8/14/2015
+3346897,conghui.wang@case.edu,cxw488,Wang,Conghui,,EMCMS,Mechanical Engineering (MS),E,ENRL,1/11/2016,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346897,conghui.wang@case.edu,cxw488,Wang,Conghui,,EMCMS,Mechanical Engineering (MS),E,ENRL,1/12/2016,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3345256,xiaoyi.zhu@case.edu,xxz479,Zhu,Xiaoyi,,EMCMS,Mechanical Engineering (MS),E,ENRL,1/9/2016,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3258954,tao.liu2@case.edu,txl302,Liu,Tao,,EMCPH,Mechanical Engineering (PhD),E,ENRL,1/12/2016,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3335894,sherif.sorour@case.edu,sss186,Sorour,Sherif,,EMCPH,Mechanical Engineering (PhD),E,ENRL,1/13/2016,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348587,juan.barreto@case.edu,jxb718,Barreto,Juan,,EMVMS,Mechanical Engineering (MS),E,ENRL,9/3/2015,11224,EMAE  480,Fatigue of Materials,500,3,I,Fall 2015,8/31/2015,12/4/2015
+3348587,juan.barreto@case.edu,jxb718,Barreto,Juan,,EMVMS,Mechanical Engineering (MS),E,ENRL,9/9/2015,11740,EMAE  450,Advanced Mech Engring Analysis,500,3,I,Fall 2015,8/31/2015,12/4/2015
+3246502,alexander.caveny@case.edu,adc76,Caveny,Alexander,,EMVMS,Mechanical Engineering (MS),E,ENRL,4/27/2015,3390,EMAE  450,Advanced Mech Engring Analysis,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3246502,alexander.caveny@case.edu,adc76,Caveny,Alexander,,EMVMS,Mechanical Engineering (MS),E,ENRL,4/27/2015,3479,EMAE  494,Energy Systems,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3246502,alexander.caveny@case.edu,adc76,Caveny,Alexander,,EMVMS,Mechanical Engineering (MS),E,ENRL,8/20/2015,11198,ECIV  420,Finite Element Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3246502,alexander.caveny@case.edu,adc76,Caveny,Alexander,,EMVMS,Mechanical Engineering (MS),E,ENRL,8/20/2015,11224,EMAE  480,Fatigue of Materials,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3246502,alexander.caveny@case.edu,adc76,Caveny,Alexander,,EMVMS,Mechanical Engineering (MS),E,ENRL,1/7/2016,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3246502,alexander.caveny@case.edu,adc76,Caveny,Alexander,,EMVMS,Mechanical Engineering (MS),E,ENRL,1/8/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3219420,john.t.mcconnell@case.edu,jtm119,McConnell,John,Tyler,EMVMS,Mechanical Engineering (MS),E,ENRL,8/24/2015,11740,EMAE  450,Advanced Mech Engring Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3219420,john.t.mcconnell@case.edu,jtm119,McConnell,John,Tyler,EMVMS,Mechanical Engineering (MS),E,ENRL,12/28/2015,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346663,shanel.pickard@case.edu,sxp671,Pickard,Shanel,,EMVMS,Mechanical Engineering (MS),E,ENRL,5/7/2015,3390,EMAE  450,Advanced Mech Engring Analysis,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3346663,shanel.pickard@case.edu,sxp671,Pickard,Shanel,,EMVMS,Mechanical Engineering (MS),E,ENRL,9/1/2015,11198,ECIV  420,Finite Element Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346663,shanel.pickard@case.edu,sxp671,Pickard,Shanel,,EMVMS,Mechanical Engineering (MS),E,ENRL,9/1/2015,11224,EMAE  480,Fatigue of Materials,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3305562,fei.chen2@case.edu,fxc132,Chen,Fei,,ENGME,Practice Oriented Master's,E,ENRL,5/4/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3293328,robert.r.hansen@case.edu,rrh37,Hansen,Robert,,ENGME,Practice Oriented Master's,E,ENRL,5/6/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3190924,william.kickel@case.edu,wgk2,Kickel,William,,ENGME,Practice Oriented Master's,E,ENRL,5/4/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3268996,jeremiah.rippel@case.edu,jar221,Rippel,Jeremiah,,ENGME,Practice Oriented Master's,E,ENRL,4/30/2015,3479,EMAE  494,Energy Systems,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3268996,jeremiah.rippel@case.edu,jar221,Rippel,Jeremiah,,ENGME,Practice Oriented Master's,E,ENRL,4/30/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3268996,jeremiah.rippel@case.edu,jar221,Rippel,Jeremiah,,ENGME,Practice Oriented Master's,E,ENRL,12/1/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348255,todd.siwik@case.edu,tls104,Siwik,Todd,,ENGME,Practice Oriented Master's,E,ENRL,8/12/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3348255,todd.siwik@case.edu,tls104,Siwik,Todd,,ENGME,Practice Oriented Master's,E,ENRL,8/13/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348255,todd.siwik@case.edu,tls104,Siwik,Todd,,ENGME,Practice Oriented Master's,E,ENRL,12/15/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3185455,michael.szabo@case.edu,mjs93,Szabo,Michael,,ENGME,Practice Oriented Master's,E,ENRL,5/18/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3206446,olivia.boyle@case.edu,orb5,Vick,Olivia,,ENGME,Practice Oriented Master's,E,ENRL,4/26/2015,3479,EMAE  494,Energy Systems,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3254663,anisha.basu@case.edu,asb122,Basu,Anisha,,ENGUG,Engineering Undergraduate,E,ENRL,5/13/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3278300,cory.birenbaum@case.edu,clb119,Birenbaum,Cory,,ENGUG,Engineering Undergraduate,E,ENRL,1/8/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3254950,erika.cyphert@case.edu,elc50,Cyphert,Erika,,ENGUG,Engineering Undergraduate,E,ENRL,4/8/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3262384,kishore.damodaran@case.edu,kvd2,Damodaran,Kishore,,ENGUG,Engineering Undergraduate,E,ENRL,4/27/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,I,Fall 2015,8/31/2015,12/4/2015
+3263206,marshaun.fitzpatrick@case.edu,mnf13,Fitzpatrick,Marshaun,,ENGUG,Engineering Undergraduate,E,ENRL,1/22/2016,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3278649,christina.franke@case.edu,cef61,Franke,Christina,,ENGUG,Engineering Undergraduate,E,ENRL,1/11/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3248913,andrew.getsy@case.edu,apg26,Getsy,Andrew,,ENGUG,Engineering Undergraduate,E,ENRL,1/9/2016,11010,EMAE  450,Advanced Mech Engring Analysis,500,3,,Spring 2016,1/11/2016,4/15/2016
+3253826,rachel.hill@case.edu,rah164,Hill,Rachel,,ENGUG,Engineering Undergraduate,E,ENRL,5/11/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3258026,brenton.jennewine@case.edu,brj30,Jennewine,Brenton,,ENGUG,Engineering Undergraduate,E,ENRL,4/27/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3260409,daniel.kernan@case.edu,dlk82,Kernan,Daniel,,ENGUG,Engineering Undergraduate,E,ENRL,5/19/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3264978,susan.kozawa@case.edu,skk61,Kozawa,Susan,,ENGUG,Engineering Undergraduate,E,ENRL,1/12/2016,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3258278,ashley.leyden@case.edu,aml170,Leyden,Ashley,,ENGUG,Engineering Undergraduate,E,ENRL,1/20/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3280891,utah.moffett@case.edu,ujm,Moffett,Utah,,ENGUG,Engineering Undergraduate,E,ENRL,12/4/2015,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3253308,catherine.passmore@case.edu,cmp100,Passmore,Catherine,,ENGUG,Engineering Undergraduate,E,ENRL,8/11/2015,11740,EMAE  450,Advanced Mech Engring Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3245267,ethan.pickering@case.edu,emp69,Pickering,Ethan,,ENGUG,Engineering Undergraduate,E,ENRL,4/6/2015,3479,EMAE  494,Energy Systems,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3251123,michael.popson@case.edu,msp99,Popson,Michael,,ENGUG,Engineering Undergraduate,E,ENRL,5/12/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,I,Fall 2015,8/31/2015,12/4/2015
+3254100,daniel.robbins@case.edu,dpr27,Robbins,Daniel,,ENGUG,Engineering Undergraduate,E,ENRL,8/7/2015,11740,EMAE  450,Advanced Mech Engring Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3254912,scott.rubeo@case.edu,ser75,Rubeo,Scott,,ENGUG,Engineering Undergraduate,E,ENRL,11/16/2015,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3254912,scott.rubeo@case.edu,ser75,Rubeo,Scott,,ENGUG,Engineering Undergraduate,E,ENRL,12/2/2015,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3266323,scott.shary@case.edu,sls196,Shary,Scott,,ENGUG,Engineering Undergraduate,E,ENRL,5/11/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3245092,sohaj.singh@case.edu,srs142,Singh,Sohaj,,ENGUG,Engineering Undergraduate,E,ENRL,5/13/2015,3507,EBME  401D,Instrumentation and Signals,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3257533,mikayla.smith@case.edu,mls260,Smith,Mikayla,,ENGUG,Engineering Undergraduate,E,ENRL,6/24/2015,10783,EBME  451,Molecul & Cellular Physiology,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3257533,mikayla.smith@case.edu,mls260,Smith,Mikayla,,ENGUG,Engineering Undergraduate,E,ENRL,11/12/2015,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3257533,mikayla.smith@case.edu,mls260,Smith,Mikayla,,ENGUG,Engineering Undergraduate,E,ENRL,11/13/2015,10487,EBME  406,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3254684,dayton.snyder@case.edu,dcs91,Snyder,Dayton,,ENGUG,Engineering Undergraduate,E,ENRL,1/13/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3264704,william.tomaszewski@case.edu,wht32,Tomaszewski,William,,ENGUG,Engineering Undergraduate,E,ENRL,1/15/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3246091,ryan.ung@case.edu,rdu3,Ung,Ryan,,ENGUG,Engineering Undergraduate,E,ENRL,5/4/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3273655,lauren.walters@case.edu,lnw13,Walters,Lauren,,ENGUG,Engineering Undergraduate,E,ENRL,1/13/2016,11474,EMAC  471,Polymers in Medicine,500,3,,Spring 2016,1/11/2016,4/15/2016
+3273713,valerie.weaver@case.edu,vaw9,Weaver,Valerie,,ENGUG,Engineering Undergraduate,E,ENRL,1/22/2016,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3344650,barbara.delgado@case.edu,btd24,Delgado,Barbara,,ESVMS,Systems & Control Engr (MS),E,ENRL,6/4/2015,11470,EECS  408,Intro to Linear Systems,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3344650,barbara.delgado@case.edu,btd24,Delgado,Barbara,,ESVMS,Systems & Control Engr (MS),E,ENRL,12/8/2015,10718,EECS  416,Convex Optimization in Engr,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348125,peter.fitzgerald@case.edu,pxf107,Fitzgerald,Peter,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/10/2015,11467,EECS  401,Digital Signal Processing,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3348125,peter.fitzgerald@case.edu,pxf107,Fitzgerald,Peter,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/11/2015,11470,EECS  408,Intro to Linear Systems,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348125,peter.fitzgerald@case.edu,pxf107,Fitzgerald,Peter,,ESVMS,Systems & Control Engr (MS),E,ENRL,12/11/2015,10718,EECS  416,Convex Optimization in Engr,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348125,peter.fitzgerald@case.edu,pxf107,Fitzgerald,Peter,,ESVMS,Systems & Control Engr (MS),E,ENRL,12/11/2015,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348583,jean.lemeau@case.edu,jwl93,Lemeau,Jean,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/31/2015,11470,EECS  408,Intro to Linear Systems,500,3,I,Fall 2015,8/31/2015,12/4/2015
+3348583,jean.lemeau@case.edu,jwl93,Lemeau,Jean,,ESVMS,Systems & Control Engr (MS),E,ENRL,1/10/2016,10913,EECS  411,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346211,brendan.martin@case.edu,bpm43,Martin,Brendan,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/2/2015,11467,EECS  401,Digital Signal Processing,500,3,C,Fall 2015,8/31/2015,12/4/2015
+3346211,brendan.martin@case.edu,bpm43,Martin,Brendan,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/2/2015,11470,EECS  408,Intro to Linear Systems,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3346211,brendan.martin@case.edu,bpm43,Martin,Brendan,,ESVMS,Systems & Control Engr (MS),E,ENRL,11/30/2015,10718,EECS  416,Convex Optimization in Engr,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346211,brendan.martin@case.edu,bpm43,Martin,Brendan,,ESVMS,Systems & Control Engr (MS),E,ENRL,12/3/2015,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348584,abhishek.sharda@case.edu,axs1305,Sharda,Abhishek,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/31/2015,11470,EECS  408,Intro to Linear Systems,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348584,abhishek.sharda@case.edu,axs1305,Sharda,Abhishek,,ESVMS,Systems & Control Engr (MS),E,ENRL,1/4/2016,10718,EECS  416,Convex Optimization in Engr,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348128,anthony.sobers@case.edu,als244,Sobers,Anthony,,ESVMS,Systems & Control Engr (MS),E,ENRL,8/9/2015,11467,EECS  401,Digital Signal Processing,500,3,D,Fall 2015,8/31/2015,12/4/2015
+3348128,anthony.sobers@case.edu,als244,Sobers,Anthony,,ESVMS,Systems & Control Engr (MS),E,ENRL,11/29/2015,10718,EECS  416,Convex Optimization in Engr,500,3,,Spring 2016,1/11/2016,4/15/2016
+3365287,nicholas.webb@case.edu,nfw11,Webb,Nicholas,,ESVMS,Systems & Control Engr (MS),E,ENRL,1/7/2016,10913,EECS  411,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3293434,heather.shiets@case.edu,hxs416,Shiets,Heather,,ESYMS,Systems & Control Engr (MS),E,ENRL,8/20/2015,11467,EECS  401,Digital Signal Processing,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3317520,mark.asirwatham@case.edu,mxa529,Asirwatham,Mark,,MDPMS,Medical Physiology (MS),E,ENRL,4/22/2015,3381,EBME  451,Molecul & Cellular Physiology,500,3,B,Summer 2015,5/11/2015,8/14/2015
+3173016,nilesh.patel@case.edu,nrp6,Patel,Nilesh,,MDPMS,Medical Physiology (MS),E,ENRL,1/12/2016,10488,EBME  401D,Instrumentation and Signals,500,3,,Spring 2016,1/11/2016,4/15/2016
+3335805,alex.bernacchi@case.edu,agb62,Bernacchi,Alex,,NONGR,Nondegree Post-Baccalaureate,E,ENRL,1/11/2016,10913,EECS  411,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+1024062,gil.covarrubias@case.edu,gxc202,Covarrubias,Gil,,NONGR,Nondegree Post-Baccalaureate,E,ENRL,8/24/2015,11171,EBME  410,Medical Imaging Fundamentals,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3347430,katherine.hunt@case.edu,kxh413,Hunt,Katherine,,NONGR,Nondegree Post-Baccalaureate,E,ENRL,8/20/2015,11198,ECIV  420,Finite Element Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3335895,tess.leggio@case.edu,tml59,Leggio,Tess,,NONGR,Nondegree Post-Baccalaureate,E,ENRL,8/21/2015,11198,ECIV  420,Finite Element Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+1017546,amber.abbott@case.edu,aaa52,Abbott,Amber,,POVME,Practice Oriented Master's,E,ENRL,8/28/2015,11740,EMAE  450,Advanced Mech Engring Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+1017546,amber.abbott@case.edu,aaa52,Abbott,Amber,,POVME,Practice Oriented Master's,E,ENRL,1/7/2016,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346115,troy.baumgardner@case.edu,tob4,Baumgardner,Troy,,POVME,Practice Oriented Master's,E,ENRL,4/27/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3346115,troy.baumgardner@case.edu,tob4,Baumgardner,Troy,,POVME,Practice Oriented Master's,E,ENRL,8/26/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346115,troy.baumgardner@case.edu,tob4,Baumgardner,Troy,,POVME,Practice Oriented Master's,E,ENRL,12/16/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3344804,robert.benkendorf@case.edu,rjb226,Benkendorf,Robert,,POVME,Practice Oriented Master's,E,ENRL,4/15/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3344804,robert.benkendorf@case.edu,rjb226,Benkendorf,Robert,,POVME,Practice Oriented Master's,E,ENRL,4/15/2015,3483,EPOM  401,Intro to Business for Engrs,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3344804,robert.benkendorf@case.edu,rjb226,Benkendorf,Robert,,POVME,Practice Oriented Master's,E,ENRL,7/22/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3344712,joseph.depasqua@case.edu,jdd61,DePasqua,Joseph,,POVME,Practice Oriented Master's,E,ENRL,4/7/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3344712,joseph.depasqua@case.edu,jdd61,DePasqua,Joseph,,POVME,Practice Oriented Master's,E,ENRL,4/7/2015,3483,EPOM  401,Intro to Business for Engrs,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3344712,joseph.depasqua@case.edu,jdd61,DePasqua,Joseph,,POVME,Practice Oriented Master's,E,ENRL,8/20/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3344712,joseph.depasqua@case.edu,jdd61,DePasqua,Joseph,,POVME,Practice Oriented Master's,E,ENRL,8/20/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3344712,joseph.depasqua@case.edu,jdd61,DePasqua,Joseph,,POVME,Practice Oriented Master's,E,ENRL,12/15/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3344712,joseph.depasqua@case.edu,jdd61,DePasqua,Joseph,,POVME,Practice Oriented Master's,E,ENRL,1/15/2016,4038,EMAE  460,Fluid Machinery,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348127,darrell.fountain@case.edu,dxf194,Fountain,Darrell,,POVME,Practice Oriented Master's,E,ENRL,7/27/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348127,darrell.fountain@case.edu,dxf194,Fountain,Darrell,,POVME,Practice Oriented Master's,E,ENRL,11/15/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3209751,german.garcia@case.edu,glg20,Garcia,German,,POVME,Practice Oriented Master's,E,ENRL,4/14/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3209751,german.garcia@case.edu,glg20,Garcia,German,,POVME,Practice Oriented Master's,E,ENRL,8/20/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3362298,andrew.l.kennedy@case.edu,alk97,Kennedy,Andrew,,POVME,Practice Oriented Master's,E,ENRL,1/11/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3346728,mary.lutz2@case.edu,mxl735,Lutz,Mary,,POVME,Practice Oriented Master's,E,ENRL,5/4/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3346728,mary.lutz2@case.edu,mxl735,Lutz,Mary,,POVME,Practice Oriented Master's,E,ENRL,5/4/2015,3483,EPOM  401,Intro to Business for Engrs,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3346728,mary.lutz2@case.edu,mxl735,Lutz,Mary,,POVME,Practice Oriented Master's,E,ENRL,7/8/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346728,mary.lutz2@case.edu,mxl735,Lutz,Mary,,POVME,Practice Oriented Master's,E,ENRL,8/17/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3346728,mary.lutz2@case.edu,mxl735,Lutz,Mary,,POVME,Practice Oriented Master's,E,ENRL,1/5/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348350,brenay.major@case.edu,blm97,Major,Brenay,,POVME,Practice Oriented Master's,E,ENRL,8/12/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3348350,brenay.major@case.edu,blm97,Major,Brenay,,POVME,Practice Oriented Master's,E,ENRL,8/13/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348350,brenay.major@case.edu,blm97,Major,Brenay,,POVME,Practice Oriented Master's,E,ENRL,1/3/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348251,matthew.oneil@case.edu,mro31,O'Neil,Matthew,,POVME,Practice Oriented Master's,E,ENRL,8/7/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348251,matthew.oneil@case.edu,mro31,O'Neil,Matthew,,POVME,Practice Oriented Master's,E,ENRL,8/7/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348251,matthew.oneil@case.edu,mro31,O'Neil,Matthew,,POVME,Practice Oriented Master's,E,ENRL,12/28/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348251,matthew.oneil@case.edu,mro31,O'Neil,Matthew,,POVME,Practice Oriented Master's,E,ENRL,12/28/2015,11011,EMAE  481,Advanced Dynamics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3211627,julie.qiu@case.edu,jxq22,Qiu,Julie,,POVME,Practice Oriented Master's,E,ENRL,4/21/2015,2046,EPOM  400,Leadrshp & Intrpersonal Skills,500,3,A,Summer 2015,5/11/2015,8/14/2015
+3211627,julie.qiu@case.edu,jxq22,Qiu,Julie,,POVME,Practice Oriented Master's,E,ENRL,8/14/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3211627,julie.qiu@case.edu,jxq22,Qiu,Julie,,POVME,Practice Oriented Master's,E,ENRL,12/9/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348259,jose.quiros@case.edu,jmq5,Quiros,Jose,,POVME,Practice Oriented Master's,E,ENRL,8/11/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,B,Fall 2015,8/31/2015,12/4/2015
+3348259,jose.quiros@case.edu,jmq5,Quiros,Jose,,POVME,Practice Oriented Master's,E,ENRL,8/11/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348259,jose.quiros@case.edu,jmq5,Quiros,Jose,,POVME,Practice Oriented Master's,E,ENRL,1/20/2016,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
+3348585,samar.sarwat@case.edu,sxs1672,Sarwat,Samar,,POVME,Practice Oriented Master's,E,ENRL,8/26/2015,10983,EPOM  403,Product and Process Design,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348585,samar.sarwat@case.edu,sxs1672,Sarwat,Samar,,POVME,Practice Oriented Master's,E,ENRL,8/27/2015,4756,EPOM  407,Engr Econ/Financial Analysis,500,3,A,Fall 2015,8/31/2015,12/4/2015
+3348585,samar.sarwat@case.edu,sxs1672,Sarwat,Samar,,POVME,Practice Oriented Master's,E,ENRL,12/22/2015,10731,EPOM  405,Applied Engr Statistics,500,3,,Spring 2016,1/11/2016,4/15/2016
