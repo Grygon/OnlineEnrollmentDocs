@@ -47,5 +47,5 @@ Temporary Items
 .apdisk
 
 # Unneeded build folder
-build\
+build/
 OnlineEnrollmentCalc.spec
