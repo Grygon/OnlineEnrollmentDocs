@@ -5,14 +5,12 @@ import csv
 
 class Student:
 
-    def __init__(self, eid, email, first, last,
-                 pref):
+    def __init__(self, email, first, last):
         self.email = email
         self.first = first
         self.last = last
         # TODO: Students can change partway through. fuck
         self.progs = {}
-        self.pref = pref
         self.courses = []
         self.droppedCourses = []
         self.reasons = []
@@ -56,25 +54,25 @@ def readEnrolls(file):
         for row in reader:
             # This whole section uses magic numbers based on the CSV
             courseData = row[10:13] + row[14]
-            # Uses Class num as identifier 
+            # Uses Class num as identifier
             if courseData[0] not in allCourses:
                 # Just trust that it works
                 allCourses[courseData[0]] = \
-                    Course(courseData[1], courseData[2], 
-                      courseData[3], row[1])
-            studentData = row[0:8]
+                    Course(courseData[1], courseData[2],
+                           courseData[3], row[1])
+            studentData = row[2:6]
             # TODO: Fix this. Just appending term to ID so changed terms work. This breaks
             # a LOT of statistics tracking (anything w/ previous-term)
-            if studentData[2] not in allStudents:
+            if studentData[1] not in allStudents:
+                name = studentData[0].partition(",")
                 # Yes... let the hate flow through you
-                allStudents[studentData[2]] = \
-                    Student(studentData[0], studentData[1], studentData[4],
-                            studentData[3], studentData[5])
+                allStudents[studentData[1]] = \
+                    Student(studentData[0], name[0], name[2])
 
-            allStudents[studentData[2]].addCourse(allCourses[courseData[1]])
-            for course in allStudents[studentData[2]].courses:
-                allStudents[studentData[2]].addProg(
-                    studentData[6], course.term)
+            allStudents[studentData[1]].addCourse(allCourses[courseData[0]])
+            for course in allStudents[studentData[1]].courses:
+                allStudents[studentData[1].addProg(
+                    studentData[2], course.term)]
 
 
 def readDrops(file):
