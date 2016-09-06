@@ -5,15 +5,12 @@ import csv
 
 class Student:
 
-    def __init__(self, eid, email, first, last,
-                 pref):
-        self.eid = eid
+    def __init__(self, email, first, last):
         self.email = email
         self.first = first
         self.last = last
         # TODO: Students can change partway through. fuck
         self.progs = {}
-        self.pref = pref
         self.courses = []
         self.droppedCourses = []
         self.reasons = []
@@ -35,14 +32,11 @@ class Student:
 # ID'ed by the course number
 class Course:
 
-    def __init__(self, rdate, cid, title, credits, term, start, end):
-        self.rdate = rdate
+    def __init__(self, cid, title, credits, term):
         self.cid = cid
         self.title = title
         self.credits = credits
         self.term = term
-        self.start = start
-        self.end = end
         self.current = False
 
 allStudents = {}
@@ -59,26 +53,26 @@ def readEnrolls(file):
         next(reader)
         for row in reader:
             # This whole section uses magic numbers based on the CSV
-            courseData = row[10:14] + row[15:16] + row[17:]
-            if courseData[1] not in allCourses:
+            courseData = row[10:13] + [row[14]]
+            # Uses Class num as identifier
+            if courseData[0] not in allCourses:
                 # Just trust that it works
-                allCourses[courseData[1]] = \
-                    Course(courseData[0], courseData[2], courseData[3],
-                           courseData[4], courseData[5], courseData[6],
-                           courseData[7])
-            studentData = row[0:8]
+                allCourses[courseData[0]] = \
+                    Course(courseData[1], courseData[2],
+                           courseData[3], row[1])
+            studentData = row[2:6]
             # TODO: Fix this. Just appending term to ID so changed terms work. This breaks
             # a LOT of statistics tracking (anything w/ previous-term)
-            if studentData[2] not in allStudents:
+            if studentData[1] not in allStudents:
+                name = studentData[0].partition(",")
                 # Yes... let the hate flow through you
-                allStudents[studentData[2]] = \
-                    Student(studentData[0], studentData[1], studentData[4],
-                            studentData[3], studentData[5])
+                allStudents[studentData[1]] = \
+                    Student(studentData[0], name[0], name[2])
 
-            allStudents[studentData[2]].addCourse(allCourses[courseData[1]])
-            for course in allStudents[studentData[2]].courses:
-                allStudents[studentData[2]].addProg(
-                    studentData[6], course.term)
+            allStudents[studentData[1]].addCourse(allCourses[courseData[0]])
+            for course in allStudents[studentData[1]].courses:
+                allStudents[studentData[1]].addProg(
+                    studentData[2], course.term)
 
 
 def readDrops(file):
@@ -208,16 +202,22 @@ outFile = None
 
 def registerFiles():
     global outFile
-    print("Please enter the enrollment file:")
+    print("Please enter an enrollment file:")
     while True:
         try:
-            readEnrolls(input("---> "))
-            break
-        except:
+            read = input("---> ")
+            if read is "" and len(allStudents) > 0:
+                break
+            readEnrolls(read)
+            print("""File read, please enter another file or 
+              a blank line to finish reading""")
+        except Exception as e:
+            print(e)
             print(
                 """Invalid enrollment file, please enter a valid file""")
 
-    print("Please enter the drops file:")
+    # No support for drops currently, so commented
+    """print("Please enter the drops file:")
     while True:
         try:
             read = input("---> ")
@@ -227,8 +227,8 @@ def registerFiles():
             break
         except:
             print(
-                """Invalid drops file, please enter a valid file
-                 or press Enter to skip""")
+                """  # Invalid drops file, please enter a valid file
+    # or press Enter to skip""")"""
 
     print("Please enter file to write to:")
     outFile = input("---> ")
