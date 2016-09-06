@@ -7,7 +7,6 @@ class Student:
 
     def __init__(self, eid, email, first, last,
                  pref):
-        self.eid = eid
         self.email = email
         self.first = first
         self.last = last
@@ -35,14 +34,11 @@ class Student:
 # ID'ed by the course number
 class Course:
 
-    def __init__(self, rdate, cid, title, credits, term, start, end):
-        self.rdate = rdate
+    def __init__(self, cid, title, credits, term, start, end):
         self.cid = cid
         self.title = title
         self.credits = credits
         self.term = term
-        self.start = start
-        self.end = end
         self.current = False
 
 allStudents = {}
@@ -59,13 +55,13 @@ def readEnrolls(file):
         next(reader)
         for row in reader:
             # This whole section uses magic numbers based on the CSV
-            courseData = row[10:14] + row[15:16] + row[17:]
-            if courseData[1] not in allCourses:
+            courseData = row[10:13] + row[14]
+            # Uses Class num as identifier 
+            if courseData[0] not in allCourses:
                 # Just trust that it works
-                allCourses[courseData[1]] = \
-                    Course(courseData[0], courseData[2], courseData[3],
-                           courseData[4], courseData[5], courseData[6],
-                           courseData[7])
+                allCourses[courseData[0]] = \
+                    Course(courseData[1], courseData[2], 
+                      courseData[3], row[1])
             studentData = row[0:8]
             # TODO: Fix this. Just appending term to ID so changed terms work. This breaks
             # a LOT of statistics tracking (anything w/ previous-term)
