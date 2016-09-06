@@ -32,7 +32,7 @@ class Student:
 # ID'ed by the course number
 class Course:
 
-    def __init__(self, cid, title, credits, term, start, end):
+    def __init__(self, cid, title, credits, term):
         self.cid = cid
         self.title = title
         self.credits = credits
@@ -53,7 +53,7 @@ def readEnrolls(file):
         next(reader)
         for row in reader:
             # This whole section uses magic numbers based on the CSV
-            courseData = row[10:13] + row[14]
+            courseData = row[10:13] + [row[14]]
             # Uses Class num as identifier
             if courseData[0] not in allCourses:
                 # Just trust that it works
@@ -71,8 +71,8 @@ def readEnrolls(file):
 
             allStudents[studentData[1]].addCourse(allCourses[courseData[0]])
             for course in allStudents[studentData[1]].courses:
-                allStudents[studentData[1].addProg(
-                    studentData[2], course.term)]
+                allStudents[studentData[1]].addProg(
+                    studentData[2], course.term)
 
 
 def readDrops(file):
@@ -211,7 +211,8 @@ def registerFiles():
             readEnrolls(read)
             print("""File read, please enter another file or 
               a blank line to finish reading""")
-        except:
+        except Exception as e:
+            print(e)
             print(
                 """Invalid enrollment file, please enter a valid file""")
 
@@ -227,7 +228,7 @@ def registerFiles():
         except:
             print(
                 """  # Invalid drops file, please enter a valid file
-                 #or press Enter to skip""")"""
+    # or press Enter to skip""")"""
 
     print("Please enter file to write to:")
     outFile = input("---> ")
