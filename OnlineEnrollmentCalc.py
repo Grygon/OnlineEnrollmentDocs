@@ -202,16 +202,21 @@ outFile = None
 
 def registerFiles():
     global outFile
-    print("Please enter the enrollment file:")
+    print("Please enter an enrollment file:")
     while True:
         try:
-            readEnrolls(input("---> "))
-            break
+            read = input("---> ")
+            if read is "" and len(allStudents) > 0:
+                break
+            readEnrolls(read)
+            print("""File read, please enter another file or 
+              a blank line to finish reading""")
         except:
             print(
                 """Invalid enrollment file, please enter a valid file""")
 
-    print("Please enter the drops file:")
+    # No support for drops currently, so commented
+    """print("Please enter the drops file:")
     while True:
         try:
             read = input("---> ")
@@ -221,8 +226,8 @@ def registerFiles():
             break
         except:
             print(
-                """Invalid drops file, please enter a valid file
-                 or press Enter to skip""")
+                """  # Invalid drops file, please enter a valid file
+                 #or press Enter to skip""")"""
 
     print("Please enter file to write to:")
     outFile = input("---> ")
