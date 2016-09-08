@@ -46,7 +46,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Unneeded build folder
-build/
 OnlineEnrollmentCalc.spec
 Output.csv
