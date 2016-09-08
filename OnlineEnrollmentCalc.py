@@ -247,33 +247,11 @@ def registerFiles():
             print("""File read, please enter another file or 
               a blank line to finish reading""")
         except Exception as e:
-            print(e)
             print(
                 """Invalid enrollment file, please enter a valid file""")
 
-    # No support for drops currently, so commented
-    """print("Please enter the drops file:")
-    while True:
-        try:
-            read = input("---> ")
-            if read is "":
-                break
-            readDrops(read)
-            break
-        except:
-            print(
-                """  # Invalid drops file, please enter a valid file
-    # or press Enter to skip""")"""
-
     print("Please enter file to write to:")
     outFile = input("---> ")
-
-
-def testFiles():
-    global outFile
-    readFile("Enrols.csv")
-    readDrops("Drops.csv")
-    outFile = "test.csv"
 
 
 def createPrograms():
