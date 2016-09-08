@@ -9,7 +9,6 @@ class Student:
         self.email = email
         self.first = first
         self.last = last
-        # TODO: Students can change partway through. fuck
         self.progs = {}
         self.courses = []
         self.droppedCourses = []
@@ -19,10 +18,12 @@ class Student:
         if course not in self.courses:
             self.courses.append(course)
 
-    def dropCourse(self, course):
+    def dropCourse(self, course, reason=""):
         if course in self.courses:
             self.droppedCourses.append(course)
-            self.courses.pop(course)
+            self.reasons.append(reason)
+            if course in self.courses:
+                self.courses.pop(course)
 
     def addProg(self, program, term):
         if term not in self.progs:
@@ -43,6 +44,40 @@ allStudents = {}
 allCourses = {}
 programs = []
 virtPrograms = []
+
+
+def readFile(file):
+    with open(file, newline='') as csvfile:
+
+        reader = csv.reader(csvfile)
+        next(reader)
+        next(reader)
+        for row in reader:
+            # This whole section uses magic numbers based on the CSV
+            courseData = row[10:13] + [row[14] + row[7]]
+            # Uses Class num as identifier
+            if courseData[0] not in allCourses:
+                # Just trust that it works
+                allCourses[courseData[0]] = \
+                    Course(courseData[1], courseData[2],
+                           courseData[3], row[1])
+            studentData = row[2:6]
+            # Using campus ID for tracking
+            if studentData[1] not in allStudents:
+                name = studentData[0].partition(",")
+                # Yes... let the hate flow through you
+                allStudents[studentData[1]] = \
+                    Student(studentData[0], name[0], name[2])
+
+            if courseData[4] == "ENRL":
+                allStudents[studentData[1]].addCourse(
+                    allCourses[courseData[0]])
+            else:
+                allStudents[studentData[1]].dropCourse(
+                    allCourses[courseData[0]], courseData[4])
+            for course in allStudents[studentData[1]].courses:
+                allStudents[studentData[1]].addProg(
+                    studentData[2], course.term)
 
 
 def readEnrolls(file):
@@ -208,7 +243,7 @@ def registerFiles():
             read = input("---> ")
             if read is "" and len(allStudents) > 0:
                 break
-            readEnrolls(read)
+            readFile(read)
             print("""File read, please enter another file or 
               a blank line to finish reading""")
         except Exception as e:
@@ -236,7 +271,7 @@ def registerFiles():
 
 def testFiles():
     global outFile
-    readEnrolls("Enrols.csv")
+    readFile("Enrols.csv")
     readDrops("Drops.csv")
     outFile = "test.csv"
 
