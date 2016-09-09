@@ -198,15 +198,15 @@ def registerFiles():
     global outFile
     print("Please enter an enrollment file:")
     while True:
-        #try:
+        try:
             read = input("---> ")
             if read is "" and len(allStudents) > 0:
                 break
             readFile(read)
             print("""File read, please enter another file or
                   a blank line to finish reading""")
-        #except Exception as e:
-        #    print(e)
+        except Exception as e:
+            print(e)
             print(
                 """Invalid enrollment file, please enter a valid file""")
 
