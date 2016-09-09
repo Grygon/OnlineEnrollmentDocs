@@ -54,7 +54,7 @@ def readFile(file):
         next(reader)
         for row in reader:
             # This whole section uses magic numbers based on the CSV
-            courseData = row[10:13] + [row[14] + row[7]]
+            courseData = row[10:13] + [row[14]] + [row[7]]
             # Uses Class num as identifier
             if courseData[0] not in allCourses:
                 # Just trust that it works
@@ -69,63 +69,22 @@ def readFile(file):
                 allStudents[studentData[1]] = \
                     Student(studentData[0], name[0], name[2])
 
+            # Sorts through whether the student is enrolled
+            # or dropped the course
             if courseData[4] == "ENRL":
                 allStudents[studentData[1]].addCourse(
                     allCourses[courseData[0]])
             else:
                 allStudents[studentData[1]].dropCourse(
                     allCourses[courseData[0]], courseData[4])
-            for course in allStudents[studentData[1]].courses:
-                allStudents[studentData[1]].addProg(
-                    studentData[2], course.term)
 
+            # Adds the program to the student
+            allStudents[studentData[1]].addProg(
+                studentData[2], row[1])
 
-def readEnrolls(file):
-    with open(file, newline='') as csvfile:
-
-        reader = csv.reader(csvfile)
-        next(reader)
-        next(reader)
-        for row in reader:
-            # This whole section uses magic numbers based on the CSV
-            courseData = row[10:13] + [row[14]]
-            # Uses Class num as identifier
-            if courseData[0] not in allCourses:
-                # Just trust that it works
-                allCourses[courseData[0]] = \
-                    Course(courseData[1], courseData[2],
-                           courseData[3], row[1])
-            studentData = row[2:6]
-            # TODO: Fix this. Just appending term to ID so changed terms work. This breaks
-            # a LOT of statistics tracking (anything w/ previous-term)
-            if studentData[1] not in allStudents:
-                name = studentData[0].partition(",")
-                # Yes... let the hate flow through you
-                allStudents[studentData[1]] = \
-                    Student(studentData[0], name[0], name[2])
-
-            allStudents[studentData[1]].addCourse(allCourses[courseData[0]])
-            for course in allStudents[studentData[1]].courses:
-                allStudents[studentData[1]].addProg(
-                    studentData[2], course.term)
-
-
-def readDrops(file):
-    with open(file, newline='') as csvfile:
-        reader = csv.reader(csvfile)
-        next(reader)
-        next(reader)
-        for row in reader:
-            student = row[2]
-            reason = row[13]
-            cid = row[15]
-            # Issue: Not all allStudents/allCourses have been enrolled before
-            # being dropped. TODO
-            if student in allStudents and cid in allCourses:
-                allStudents[student].dropCourse(allCourses[cid])
-                allStudents[student].reasons.append(reason)
-
-        # TODO: Implement new prog listing for drops.
+            # Removes students with no registered courses
+            if len(allStudents[studentData[1]].courses) == 0:
+                allStudents.pop(studentData[1])
 
 
 # Counts number of course enrollments per term. Each student
@@ -239,14 +198,15 @@ def registerFiles():
     global outFile
     print("Please enter an enrollment file:")
     while True:
-        try:
+        #try:
             read = input("---> ")
             if read is "" and len(allStudents) > 0:
                 break
             readFile(read)
-            print("""File read, please enter another file or 
-              a blank line to finish reading""")
-        except Exception as e:
+            print("""File read, please enter another file or
+                  a blank line to finish reading""")
+        #except Exception as e:
+        #    print(e)
             print(
                 """Invalid enrollment file, please enter a valid file""")
 
